@@ -25,7 +25,7 @@ public class Lienzo extends JPanel {
 	public void paint(Graphics g) {
 		g.fillRect(0, 0, getWidth(), getHeight());
 		if (numeros != null) {
-			int x = 0;
+			int x = numeros.size() < getWidth() ? (getWidth() - numeros.size()) / 2 : 0;
 			int y = getHeight() - 1;
 			g.setColor(Color.ORANGE);
 			for (int n: numeros) {
